@@ -1,0 +1,107 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+  </head>
+  <body>
+    <div class="heart-sec">
+      <img
+        src="https://png.pngtree.com/png-vector/20220428/ourmid/pngtree-smooth-glossy-heart-vector-file-ai-and-png-png-image_4557871.png"
+      />
+    </div>
+    <hr />
+    <div class="text-spring-sec">
+      <p>Arnav Maurya</p>
+    </div>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Heart Part Sec */
+      .heart-sec {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* animation-name: bg-changer;
+        animation-duration: 10s;
+        animation-iteration-count: infinite; */
+      }
+
+      img {
+        height: 100px;
+        animation-name: pulse;
+        animation-duration: 0.8s;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+        /* animation-timing-function: cubic-bezier(0, 0.62, 1, 0.02); */
+        /* Animation Short Hand */
+        /* animation: name duration timing-function delay iteration-count;   */
+      }
+
+      @keyframes bg-changer {
+        0% {
+          background-color: aliceblue;
+        }
+        25% {
+          background-color: antiquewhite;
+        }
+        50% {
+          background-color: bisque;
+        }
+        75% {
+          background-color: orangered;
+        }
+        100% {
+          background-color: red;
+        }
+      }
+
+      @keyframes pulse {
+        from {
+          height: 100px;
+          opacity: 0;
+        }
+        to {
+          height: 200px;
+          opacity: 1;
+          filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+        }
+      }
+
+      /*  Spring Part Sec */
+      .text-spring-sec {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 40px;
+      }
+
+      .text-spring-sec p {
+        font-size: 0px;
+        animation: strech 6s linear infinite;
+      }
+
+      @keyframes strech {
+        0% {
+          letter-spacing: 0px;
+          transform: rotate(0deg);
+        }
+        50% {
+          font-size: 28px;
+          letter-spacing: 20px;
+          transform: rotate(360deg);
+        }
+        100% {
+          letter-spacing: 0px;
+          transform: rotate(0deg);
+        }
+      }
+    </style>
+  </body>
+</html>
